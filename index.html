@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Editor Rich-Text</title>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
+    <script src="editor.js"></script>
+    <script src="https://use.fontawesome.com/aac5c45839.js"></script>
+  </head>
+
+  <body onload="start()">
+
+  <h3>Editor Rich-Text</h3>
+  
+	<div>
+    <button id="bold" onclick="bold()"><i class="fa fa-bold"></i></button>
+    <button id="bold" onclick="italic()"><i class="fa fa-italic"></i></button>
+    <button id="bold" onclick="underline()"><i class="fa fa-underline"></i></button>
+    <button id="bold" onclick="strikethrough()"><i class="fa fa-strikethrough"></i></button>
+    <button id="bold" onclick="left()"><i class="fa fa-align-left"></i></button>
+    <button id="bold" onclick="right()"><i class="fa fa-align-right"></i></button>
+    <button id="bold" onclick="center()"><i class="fa fa-align-center"></i></button>
+    <button id="bold" onclick="justify()"><i class="fa fa-align-justify"></i></button>
+    <button id="bold" onclick="cut()"><i class="fa fa-cut"></i></button>
+    <button id="bold" onclick="copy()"><i class="fa fa-copy"></i></button>
+    <button id="bold" onclick="listUl()"><i class="fa fa-list-ul"></i></button>
+    <button id="bold" onclick="listOl()"><i class="fa fa-list-ol"></i></button>
+    <button id="bold" onclick="paragraph()"><i class="fa fa-paragraph"></i></button>
+
+        
+    <select onchange="changeFonts('fontName', this.value);">
+      <option value="Arial">Arial</option>
+      <option value="Arial Black">Arial Black</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Sans-Serif">sans-serif</option>
+      <option value="Open Sans">Open Sans</option>
+      <option value="Helvetica Neue">Helvetica Neue</option>
+      <option value="Helvetica">Helvetica</option> 
+      <option value="Impact">Impact</option>
+      <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+      <option value="Tahoma">Tahoma</option>
+      <option value="Verdana">Verdana</option>
+      <option value="Courier New">Courier New</option>
+    </select>
+
+    <select onchange="changeFonts('fontSize', this.value);">
+      <option value="1">1</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+
+    </select>
+    
+
+    Font Color: <input type="color" onchange="changeColor('foreColor', this.value);"/>
+    Background: <input type="color" onchange="changeColor('hiliteColor', this.value);"/>
+
+
+	</div>
+	
+	<iframe id="iframe" name="iframe" contenteditable="true" width="1000px" height="500px">
+	</iframe>
+
+  </body>
+</html> 
